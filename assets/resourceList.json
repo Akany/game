@@ -1,0 +1,22 @@
+{
+	"sym": [
+		"SYM1",
+		"SYM3",
+		"SYM4",
+		"SYM5",
+		"SYM6",
+		"SYM7"
+	],
+
+	"imgUrl": {
+		"SYM1": "assets/img/SYM1.png",
+		"SYM3": "assets/img/SYM3.png",
+		"SYM4": "assets/img/SYM4.png",
+		"SYM5": "assets/img/SYM5.png",
+		"SYM6": "assets/img/SYM6.png",
+		"SYM7": "assets/img/SYM7.png",
+		"BTN_Spin": "assets/img/BTN_Spin.png",
+		"BTN_Spin_d": "assets/img/BTN_Spin_d.png",
+		"BG": "assets/img/BG.png"
+	}
+}
