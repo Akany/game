@@ -1,30 +1,32 @@
-var LoadController = function (resourceUrl) {
-	this.resourceUrl = resourceUrl;
+define([
+	'view/loadView',
+	'proxy'
+], function (LoadView, Proxy) {
+	var constructor = function (config) {
+		this.config = config;
+		this.init();
+	};
 
-	this.init();
-};
+	constructor.prototype = {
+		init: function () {
+			this.initProxy();
+			this.initView();
+		},
 
-LoadController.prototype = {
-	init: function () {
-		require('js/proxy.js', this.onProxyCreated, this);
-	},
+		initProxy: function () {
+			this.proxy = new Proxy();
+		},
 
-	onProxyCreated: function () {
-		this.initProxy();
+		initView: function () {
+			this.view = new LoadView(this.config.canvasId);
+		},
 
-		this.loadResource();
-	},
+		loadResource: function (callback, scope) {
+			this.view.showLoading();
+			this.proxy.load(this.config.resourceUrl, callback, scope);
+		}
 
-	initProxy: function () {
-		this.proxy = new Proxy();
-	},
+	};
 
-	loadResource: function () {
-		this.proxy.load(this.resourceUrl, this.onResourceLoaded, this);
-	},
-
-	onResourceLoaded: function (data) {
-		
-	}
-
-};
+	return constructor;
+});
