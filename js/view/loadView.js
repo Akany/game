@@ -1,3 +1,4 @@
+// view class, related to show load state
 define(function () {
 	var constructor = function (canvasId) {
 		this.canvasId = canvasId;

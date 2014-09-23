@@ -1,3 +1,4 @@
+// main controller of the game
 define(['controller/loadController'], function (LoadController) {
 	var constructor = function (config) {
 		this.init(config);

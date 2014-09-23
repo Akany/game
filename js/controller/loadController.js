@@ -1,3 +1,5 @@
+// Class responsed for load resources
+// for now it load only resources list
 define([
 	'view/loadView',
 	'proxy'

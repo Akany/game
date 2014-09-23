@@ -1,3 +1,4 @@
+// class responsed for ajax requests
 define(function () {
 	var constructor = function () {
 
